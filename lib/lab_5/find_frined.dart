@@ -3,6 +3,9 @@
 import 'dart:io';
 
 void main() {
+  // Something Went Wrong.... // neel not soppreted
+  // String name = stdin.readLineSync()!;
+  // print(name);
   bool isCheck = true;
   List<Map<dynamic, dynamic>> phonebook = [
     {'name': 'manav', 'age': 12},
