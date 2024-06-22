@@ -16,7 +16,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.amber,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -27,7 +27,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.red,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -38,7 +38,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.grey,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -55,7 +55,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.blue,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -66,7 +66,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.grey,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -77,7 +77,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.lightBlueAccent,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -94,7 +94,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.pink,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -105,7 +105,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.purple,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
@@ -116,7 +116,7 @@ class PartScreen9 extends StatelessWidget {
                     height: double.infinity,
                     width: double.infinity,
                     color: Colors.cyanAccent,
-                    child: Text(
+                    child: const Text(
                       "Part Screen 9",
                       style: TextStyle(color: Colors.greenAccent, fontSize: 30),
                     ),
