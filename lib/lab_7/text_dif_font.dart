@@ -10,12 +10,44 @@ class DifTextFont extends StatelessWidget {
         children: [
           Text(
             "Text font 1",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 22,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'Poppins'),
           ),
-          Text("Text font 2"),
-          Text("Text font 3"),
-          Text("Text font 4"),
-          Text("Text font 5"),
+          Text(
+            "Text font 2",
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Poppins',
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+          Text(
+            "Text font 3",
+            style: TextStyle(
+              fontSize: 22,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "Text font 4",
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Poppins',
+              fontStyle: FontStyle.italic,
+              fontSize: 22,
+            ),
+          ),
+          Text(
+            "Text font 5",
+            style: TextStyle(
+              fontWeight: FontWeight.w300,
+              fontSize: 22,
+            ),
+          ),
         ],
       ),
     );

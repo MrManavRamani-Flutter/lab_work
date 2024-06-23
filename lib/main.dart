@@ -19,7 +19,7 @@ void main() {
         scaffoldBackgroundColor: Colors.black,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: 'lab_7_3',
+      initialRoute: 'lab_7_2',
       routes: {
         // Lab 6
         "lab_6_1": (context) => const HorizontalPart(),
