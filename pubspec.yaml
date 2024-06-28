@@ -62,25 +62,41 @@ flutter:
 
 
   #----------------Local Assets ---------------------#
+  assets:
+    - assets/img/
 
   fonts:
-    - family: Poppins
+    - family: Poppins-Light
       fonts:
         - asset: assets/fonts/Poppins-Light.ttf
           weight: 300
+    - family: Poppins-Regular
+      fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
           weight: 400
+    - family: Poppins-Italic
+      fonts:
         - asset: assets/fonts/Poppins-Italic.ttf
           style: italic
+    - family: Poppins-Medium
+      fonts:
         - asset: assets/fonts/Poppins-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Poppins-MediumItalic.ttf
+    - family: Poppins-Medium
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
           weight: 500
           style: italic
+    - family: Poppins-SemiBold
+      fonts:
         - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 600
+    - family: Poppins-SemiBoldItalic
+      fonts:
         - asset: assets/fonts/Poppins-SemiBoldItalic.ttf
           weight: 600
           style: italic
+    - family: Poppins-Bold
+      fonts:
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 800

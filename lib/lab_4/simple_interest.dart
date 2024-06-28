@@ -11,5 +11,6 @@ double simpleInt(int p, double r, int n) {
 void main() {
   int p = 1000, n = 5;
   double r = 2.5;
+
   getVal(price: p, rate: r, year: n);
 }

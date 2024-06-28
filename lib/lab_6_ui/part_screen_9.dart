@@ -12,6 +12,7 @@ class PartScreen9 extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
+                  
                   child: Container(
                     height: double.infinity,
                     width: double.infinity,

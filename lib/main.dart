@@ -2,11 +2,13 @@ import 'package:demo/lab_6_ui/part_screen_9_dif.dart';
 import 'package:demo/lab_7/hello_print.dart';
 import 'package:flutter/material.dart';
 
+
 import 'lab_6_ui/part_screen_9.dart';
 import 'lab_6_ui/part_screen_horizontal_3.dart';
 import 'lab_6_ui/part_screen_vertical_3.dart';
 import 'lab_7/text_dif_font.dart';
 import 'lab_7/text_field_print_terminal.dart';
+import 'lab_8/image_display.dart';
 
 void main() {
   runApp(
@@ -19,7 +21,7 @@ void main() {
         scaffoldBackgroundColor: Colors.black,
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: 'lab_7_2',
+      initialRoute: 'screen_1',
       routes: {
         // Lab 6
         "lab_6_1": (context) => const HorizontalPart(),
@@ -30,6 +32,8 @@ void main() {
         "lab_7_1": (context) => const HelloPrint(),
         "lab_7_2": (context) => const DifTextFont(),
         "lab_7_3": (context) => const TextFieldPrintTerminal(),
+        // lab 8
+        "lab_8_1": (context) => const ImageView(),
       },
     ),
   );

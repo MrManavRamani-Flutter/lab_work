@@ -5,48 +5,46 @@ class DifTextFont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
+    return Scaffold(
+      drawer: const Drawer(
+        child: Column(
+          children: [
+            Text("data 1"),
+            Text("data 3"),
+            Text("data 4"),
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.grey,
+        title: const Text("Helo"),
+      ),
+      body: const Column(
         children: [
           Text(
             "Text font 1",
-            style: TextStyle(
-                fontSize: 22,
-                fontStyle: FontStyle.italic,
-                fontFamily: 'Poppins'),
+            style: TextStyle(fontFamily: 'Poppins-Light'),
           ),
           Text(
             "Text font 2",
             style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Poppins',
-              fontStyle: FontStyle.italic,
+              fontFamily: 'Poppins-Regular',
             ),
           ),
           Text(
             "Text font 3",
             style: TextStyle(
-              fontSize: 22,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.bold,
+              fontFamily: 'Poppins-Italic',
             ),
           ),
           Text(
             "Text font 4",
             style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins',
-              fontStyle: FontStyle.italic,
-              fontSize: 22,
+              fontFamily: 'Poppins-Medium',
             ),
           ),
           Text(
             "Text font 5",
-            style: TextStyle(
-              fontWeight: FontWeight.w300,
-              fontSize: 22,
-            ),
           ),
         ],
       ),
