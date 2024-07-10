@@ -1,4 +1,7 @@
 import 'package:demo/new_learn_design/lab_6.dart';
+import 'package:demo/new_learn_design/lab_7.dart';
+import 'package:demo/new_learn_design/lab_8.dart';
+import 'package:demo/new_learn_design/lab_9.dart';
 import 'package:flutter/material.dart';
 
 class Lab extends StatelessWidget {
@@ -142,9 +145,17 @@ class Lab extends StatelessWidget {
                 shadowColor: Colors.greenAccent,
                 surfaceTintColor: Colors.greenAccent,
                 margin: const EdgeInsets.all(10),
-                child: const ListTile(
-                  leading: FlutterLogo(),
-                  title: Text(
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Lab7(),
+                      ),
+                    );
+                  },
+                  leading: const FlutterLogo(),
+                  title: const Text(
                     "Lab 7",
                     style: TextStyle(color: Colors.white),
                   ),
@@ -158,9 +169,17 @@ class Lab extends StatelessWidget {
                 shadowColor: Colors.greenAccent,
                 surfaceTintColor: Colors.greenAccent,
                 margin: const EdgeInsets.all(10),
-                child: const ListTile(
-                  leading: FlutterLogo(),
-                  title: Text(
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Lab8(),
+                      ),
+                    );
+                  },
+                  leading: const FlutterLogo(),
+                  title: const Text(
                     "Lab 8",
                     style: TextStyle(color: Colors.white),
                   ),
@@ -174,9 +193,17 @@ class Lab extends StatelessWidget {
                 shadowColor: Colors.greenAccent,
                 surfaceTintColor: Colors.greenAccent,
                 margin: const EdgeInsets.all(10),
-                child: const ListTile(
-                  leading: FlutterLogo(),
-                  title: Text(
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Lab9(),
+                      ),
+                    );
+                  },
+                  leading: const FlutterLogo(),
+                  title: const Text(
                     "Lab 9",
                     style: TextStyle(color: Colors.white),
                   ),

@@ -5,21 +5,8 @@ class DifTextFont extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const Drawer(
-        child: Column(
-          children: [
-            Text("data 1"),
-            Text("data 3"),
-            Text("data 4"),
-          ],
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: const Text("Helo"),
-      ),
-      body: const Column(
+    return const Scaffold(
+      body: Column(
         children: [
           Text(
             "Text font 1",

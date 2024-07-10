@@ -17,88 +17,28 @@ class Lab6 extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Lab 6"),
           centerTitle: true,
-          bottom: TabBar(
+          bottom: const TabBar(
             tabs: [
               Tab(
-                child: Expanded(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                    ),
-                    child: const Text("Lab_6_1"),
-                  ),
-                ),
-                // text: "Lab_6_1",
+                child: Text("Lab_6_1"),
               ),
               Tab(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: const Text("Lab_6_2"),
-                ),
-                // text: "Lab_6_2",
+                child: Text("Lab_6_2"),
               ),
               Tab(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: const Text("Lab_6_3"),
-                ),
-                // text: "Lab_6_3",
+                child: Text("Lab_6_3"),
               ),
               Tab(
-                child: Expanded(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                    ),
-                    child: const Text("Lab_6_4"),
-                  ),
-                ),
-                // text: "Lab_6_1",
+                child: Text("Lab_6_4"),
               ),
               Tab(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: const Text("Lab_6_5"),
-                ),
-                // text: "Lab_6_2",
+                child: Text("Lab_6_5"),
               ),
               Tab(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: const Text("Lab_6_6"),
-                ),
-                // text: "Lab_6_3",
+                child: Text("Lab_6_6"),
               ),
               Tab(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                  ),
-                  child: const Text("Lab_6_7"),
-                ),
-                // text: "Lab_6_3",
+                child: Text("Lab_6_7"),
               ),
             ],
           ),
@@ -111,7 +51,7 @@ class Lab6 extends StatelessWidget {
             PartScreen9(),
             PartScreen9Dif(),
             HorizontalPart(),
-            VerticalPart()
+            VerticalPart(),
           ],
         ),
       ),
