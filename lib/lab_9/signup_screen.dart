@@ -13,7 +13,7 @@ class SignupScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text(
-                "Instagram",
+                "Register Form",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -21,17 +21,7 @@ class SignupScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 48.0),
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'Email',
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 12.0),
+              const Text('Full Name'),
               TextFormField(
                 decoration: const InputDecoration(
                   hintText: 'Full Name',
@@ -43,17 +33,33 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12.0),
+              const Text('Phone'),
               TextFormField(
                 decoration: const InputDecoration(
-                  hintText: 'Username',
+                  hintText: 'Phone',
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   ),
                 ),
+                keyboardType: TextInputType.phone,
               ),
               const SizedBox(height: 12.0),
+              const Text('Email'),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Email',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              const SizedBox(height: 12.0),
+              const Text('Password'),
               TextFormField(
                 decoration: const InputDecoration(
                   hintText: 'Password',
@@ -65,6 +71,45 @@ class SignupScreen extends StatelessWidget {
                   ),
                 ),
                 obscureText: true,
+              ),
+              const SizedBox(height: 12.0),
+              const Text('Date'),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Date',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                ),
+                keyboardType: TextInputType.datetime,
+              ),
+              const SizedBox(height: 12.0),
+              const Text('Time'),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Time',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                ),
+                keyboardType: TextInputType.datetime,
+              ),
+              const SizedBox(height: 12.0),
+              const Text('DateTime'),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'DateTime',
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  ),
+                ),
+                keyboardType: TextInputType.datetime,
               ),
               const SizedBox(height: 12.0),
               ElevatedButton(
@@ -125,7 +170,10 @@ class SignupScreen extends StatelessWidget {
                     style: TextStyle(color: Colors.grey),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context,
+                          '/login'); // Assuming you have a route defined for login screen
+                    },
                     child: const Text(
                       'Log In.',
                       style: TextStyle(

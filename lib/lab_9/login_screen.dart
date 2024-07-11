@@ -1,4 +1,7 @@
+import 'package:demo/lab_9/utils/data.dart';
 import 'package:flutter/material.dart';
+
+enum SampleItem { itemOne, itemTwo, itemThree }
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -11,10 +14,37 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  bool isTrue = true;
+  SampleItem? selectedItem;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          PopupMenuButton(
+            initialValue: selectedItem,
+            onSelected: (SampleItem item) {
+              selectedItem = item;
+              setState(() {});
+            },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<SampleItem>>[
+              const PopupMenuItem(
+                value: SampleItem.itemOne,
+                child: Text("Item 1"),
+              ),
+              const PopupMenuItem(
+                value: SampleItem.itemTwo,
+                child: Text("Item 2"),
+              ),
+              const PopupMenuItem(
+                value: SampleItem.itemThree,
+                child: Text("Item 3"),
+              ),
+            ],
+          ),
+        ],
+      ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Form(
@@ -25,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               const Spacer(flex: 2),
               const Text(
-                "Instagram",
+                "Login Form",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -39,13 +69,32 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (value == null || value.isEmpty) {
                     return 'Enter Email!';
                   }
+                  if (!RegExp(
+                          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+$")
+                      .hasMatch(value)) {
+                    return 'Enter valid Email..!';
+                  }
                   return null;
                 },
-                decoration: const InputDecoration(
-                  hintText: 'email@gmail.com',
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                  border: OutlineInputBorder(
+                onChanged: (val) {
+                  setState(() {});
+                },
+                decoration: InputDecoration(
+                  labelText: "Email",
+                  alignLabelWithHint: true,
+                  prefixIcon: const Icon(Icons.email),
+                  suffix: (emailController.text.isNotEmpty)
+                      ? IconButton(
+                          onPressed: () {
+                            emailController.text = "";
+                            setState(() {});
+                          },
+                          icon: const Icon(Icons.close),
+                        )
+                      : Container(),
+                  contentPadding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 10.0),
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   ),
                 ),
@@ -57,23 +106,51 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (value == null || value.isEmpty) {
                     return "Enter Password!";
                   }
+                  if (value.length < 7) {
+                    return "Password must be at least 7 characters long";
+                  }
                   return null;
                 },
-                decoration: const InputDecoration(
-                  hintText: 'Password',
-                  suffixIcon: Icon(Icons.remove_red_eye),
-                  contentPadding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                  border: OutlineInputBorder(
+                keyboardType: TextInputType.emailAddress,
+                maxLength: 15,
+                decoration: InputDecoration(
+                  alignLabelWithHint: true,
+                  labelText: "Password",
+                  prefixIcon: const Icon(Icons.password),
+                  suffix: (isTrue)
+                      ? IconButton(
+                          icon: const Icon(Icons.remove_red_eye),
+                          onPressed: () {
+                            isTrue = false;
+                            setState(() {});
+                          },
+                        )
+                      : IconButton(
+                          onPressed: () {
+                            isTrue = true;
+                            setState(() {});
+                          },
+                          icon: const Icon(Icons.visibility_off),
+                        ),
+                  contentPadding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 10.0),
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   ),
                 ),
-                obscureText: true,
+                obscureText: isTrue,
               ),
               const SizedBox(height: 12.0),
               ElevatedButton(
                 onPressed: () {
-                  if (globalKey.currentState!.validate()) {}
+                  if (globalKey.currentState!.validate()) {
+                    Global.userData.add({
+                      'email': emailController.text,
+                      'pass': passController.text
+                    });
+                    setState(() {});
+                    Navigator.pushReplacementNamed(context, 'lab');
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 14.0),

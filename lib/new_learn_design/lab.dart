@@ -1,3 +1,4 @@
+import 'package:demo/lab_9/utils/data.dart';
 import 'package:demo/new_learn_design/lab_6.dart';
 import 'package:demo/new_learn_design/lab_7.dart';
 import 'package:demo/new_learn_design/lab_8.dart';
@@ -211,6 +212,16 @@ class Lab extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+      body: Center(
+        child: ListView.builder(
+          itemCount: Global.userData.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text("${Global.userData[index]['email']}"),
+            );
+          },
         ),
       ),
     );
