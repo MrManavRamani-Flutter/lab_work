@@ -2,6 +2,7 @@ import 'package:demo/lab_6_ui/image_text.dart';
 import 'package:demo/lab_6_ui/part_screen_9_dif.dart';
 import 'package:demo/lab_7/hello_print.dart';
 import 'package:demo/lab_7/text_field.dart';
+import 'package:demo/ui_design/form_design.dart';
 import 'package:demo/ui_design/row_col_design.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,7 @@ void main() {
       routes: {
         // all lab work : ui
         "lab": (context) => const Lab(),
+        "form": (context) => const FormDesign(),
         // ui design
         "ui_r_c": (context) => const RowColDesign(),
         // Lab 6

@@ -1,4 +1,5 @@
 import 'package:demo/lab_9/utils/data.dart';
+import 'package:demo/new_learn_design/lab_10.dart';
 import 'package:demo/new_learn_design/lab_6.dart';
 import 'package:demo/new_learn_design/lab_7.dart';
 import 'package:demo/new_learn_design/lab_8.dart';
@@ -81,38 +82,48 @@ class Lab extends StatelessWidget {
             children: [
               // Header Design
               const DrawerHeader(
-                margin: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  image: DecorationImage(
-                    image: AssetImage(
-                      './assets/img/3594040.jpg',
-                    ),
-                    fit: BoxFit.fill,
-                  ),
-                  backgroundBlendMode: BlendMode.darken,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    // SizedBox(height: 15),
-                    Text(
-                      "Manav Ramani",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    image: DecorationImage(
+                      image: AssetImage(
+                        './assets/img/3594040.jpg',
                       ),
+                      fit: BoxFit.fill,
                     ),
-                  ],
-                ),
-              ),
+                    backgroundBlendMode: BlendMode.darken,
+                  ),
+                  child: UserAccountsDrawerHeader(
+                      currentAccountPicture: CircleAvatar(
+                        child: Image(
+                          image: AssetImage(
+                            './assets/img/3594040.jpg',
+                          ),
+                        ),
+                      ),
+                      accountName: Text("Manav Ramani"),
+                      accountEmail: Text("manavpatel13402003@gmail.com"))
+                  // Column(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   crossAxisAlignment: CrossAxisAlignment.center,
+                  //   children: [
+                  //     CircleAvatar(
+                  //       radius: 30,
+                  //       child: FlutterLogo(),
+                  //     ),
+                  //     // SizedBox(height: 15),
+                  //     Text(
+                  //       "Manav Ramani",
+                  //       style: TextStyle(
+                  //         color: Colors.white,
+                  //         fontSize: 20,
+                  //         fontWeight: FontWeight.bold,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  ),
               // List Item Design
               Card(
                 color: Colors.black.withOpacity(0.8),
@@ -206,6 +217,30 @@ class Lab extends StatelessWidget {
                   leading: const FlutterLogo(),
                   title: const Text(
                     "Lab 9",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.black.withOpacity(0.8),
+                elevation: 5,
+                borderOnForeground: true,
+                semanticContainer: true,
+                shadowColor: Colors.greenAccent,
+                surfaceTintColor: Colors.greenAccent,
+                margin: const EdgeInsets.all(10),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Lab10(),
+                      ),
+                    );
+                  },
+                  leading: const FlutterLogo(),
+                  title: const Text(
+                    "Lab 10",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

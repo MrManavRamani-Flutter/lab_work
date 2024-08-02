@@ -79,6 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onChanged: (val) {
                   setState(() {});
                 },
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: "Email",
                   alignLabelWithHint: true,
@@ -111,7 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                   return null;
                 },
-                keyboardType: TextInputType.emailAddress,
                 maxLength: 15,
                 decoration: InputDecoration(
                   alignLabelWithHint: true,
